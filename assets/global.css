@@ -1,0 +1,40 @@
+body {
+    height: 90vh;
+    width: 30000px;
+}
+
+.scrollman {
+    position: fixed;
+    left: 0px;
+    top: 20vh;
+    height: 78vh;
+    width: auto;
+}
+
+.door {
+    position: absolute;
+    top: 5vh;
+    height: 70vh;
+}
+
+.doorback {
+    position: absolute;
+    top: 5vh;
+    height: 70vh;    
+}
+
+.door:hover {
+    transform-origin: top right;
+    transform: scaleX(0.95) skewY(355deg);
+}
+
+iframe {
+    position: absolute;
+        vertical-align: middle;
+            display: block; 
+            width: 100%; 
+            border: none; 
+            overflow-y: auto; 
+            overflow-x: hidden;
+    
+}

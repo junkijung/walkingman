@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>walkingman</title>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--  <link rel="icon" href="">-->
+    <link rel="stylesheet" href="assets/global.css">
+    <script type="text/javascript" src="assets/jquery-3.4.1.js"></script>
+    <script type='text/javascript' src="js/jquery.mousewheel.min.js"></script>
+
+
+</head>
+
+<body>
+<!--<img src="img/door_2.png" class="door" id="d1" onclick="message()">    -->
+<a href=exit.html></a>
+<img src="gif/w1.gif" class="scrollman">    
+</body>
+    
+    
+<script type='text/javascript' src="assets/java.js"></script>
+<script type='text/javascript'>
+(function() {
+    function scrollHorizontally(e) {
+        e = window.event || e;
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
+        document.body.scrollLeft -= (delta*40); // Multiplied by 40
+        e.preventDefault();
+    }
+    if (window.addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        window.addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        window.attachEvent("onmousewheel", scrollHorizontally);
+    }
+})();
+    </script>
+</html>
