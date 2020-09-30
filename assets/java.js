@@ -25,8 +25,8 @@ $("document").ready(function() {
     
     for (i = 1; i < 60; i++) {
         doorX.push(doorThis);
-        $("body").prepend('<img src="img/door_2.png" class="door" id="d' + i + '" onclick="message()">');
-        $("body").prepend('<img src="img/door_back.png" id="db' + i + '" class="doorback">');
+        $(".loop").prepend('<img src="img/door_2.png" class="door" id="d' + i + '">');
+        $(".loop").prepend('<img src="img/door_back.png" id="db' + i + '" class="doorback">');
         $("#d" + i).css("left", doorThis);
         $("#db" + i).css("left", doorThis);    
         doorThis = doorThis + 500;    
@@ -40,7 +40,7 @@ $("document").ready(function() {
         console.log(doorXShuffled);
         }
     
-    $("a").append('<img src="img/door_key.png" id="key" class="door">');
+    $(".exit").append('<img src="img/door_key.png" id="key" class="door">');
     $("#key").css("left", doorXShuffled[0]);
     var toDelete = doorXShuffled[0] / 500;
     $("#d" + toDelete).css("display", "none");
